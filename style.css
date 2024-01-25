@@ -55,6 +55,7 @@ body{
 .library{
     border-radius: 1rem;
     min-height: 70vh;
+    max-height: 70vh;
     position: relative;
 }
 
@@ -85,6 +86,17 @@ body{
 }
 .buttons a{
     padding: 1rem !important;
+}
+
+.login-btn{
+    margin-left: 10px !important;
+}
+
+.login-btn:hover {
+    padding: 8px 30px !important;
+    font-size: 16px !important;
+    font-weight: bold !important;
+    margin-left: 0px !important;
 }
 
 .blur{
@@ -122,7 +134,100 @@ body{
 }
 
 .platlist{
-    min-height: 80vh !important;
-    max-height: 90vh !important;
+    min-height: 75vh !important;
+    max-height: 75vh !important;
         overflow-y: scroll;
 }
+
+
+
+/* dark scrollbar  */
+
+/* Webkit-based browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+    width: 12px;
+    /* width of the scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #2d2d2d;
+    /* color of the scrollbar thumb */
+    border-radius: 6px;
+    /* roundness of the scrollbar thumb */
+}
+
+::-webkit-scrollbar-track {
+    background-color: #1e1e1e;
+    /* color of the scrollbar track */
+}
+
+/* Firefox */
+/* Note: Firefox currently (as of my last knowledge update in January 2022) does not support customizing the scrollbar appearance using standard CSS. */
+
+/* For both Webkit and Firefox (Optional): */
+body {
+    scrollbar-width: thin;
+    /* 'auto' or 'thin' to enable the browser's native scrollbar */
+    scrollbar-color: #2d2d2d #1e1e1e;
+    /* thumb color, track color */
+}
+
+.player{
+    background-color: #dad5d5;
+    position: fixed;
+    bottom: 20px;
+    width: 73vw !important;
+    border-radius: 30px !important;
+    filter: invert(1);
+}
+
+.playButton{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    cursor: pointer;
+}
+
+.songList{
+    /* position: relative; */
+    min-height: 40vh !important;
+    max-height: 50vh !important;
+    overflow-y:scroll ;
+    overflow-x: hidden;
+}
+
+.songList ul li{
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content:space-between !important;
+    border: 2px solid white !important;
+    border-radius: 5px;
+    margin: 10px !important;
+    padding: 13px;
+    gap: 14px !important;
+    cursor: pointer;
+}
+
+.songList .info .info2{
+    font-size: 13px;
+}
+.seekbar{
+    height: 10px ;
+    width: 97% ;
+    border: 2px solid black ;
+    position: absolute ;
+    bottom: 0;
+    border-radius: 10px;
+    margin-left: 1rem !important;
+}
+
+.circle{
+    width: 18px;
+    height: 18px;
+    border-radius: 10px;
+    background-color: black;
+    position: relative ;
+    bottom: 5px ;
+}
+
